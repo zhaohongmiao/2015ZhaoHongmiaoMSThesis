@@ -1,0 +1,9 @@
+f=imread('ayst.tif');
+ffft=fft2(f);
+ffftshift=fftshift(log(1+abs(ffft)));
+%g=gscale(ffft);
+%gshift=gscale(ffftshift);
+imshow(ffftshift,[])
+set(gca,'position',[0,0,1,1]);
+set(gcf,'paperpositionmode','auto');
+print('-dbmp','flybh');

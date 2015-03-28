@@ -2,15 +2,15 @@
 % This file is modified from ctex's ctex-xecjk-winfonts.def.
 
 \ProvidesFile{thufonts.def}
-\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
+\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi_GB2312}]{SimSun}
 \setCJKsansfont{SimHei}
-\setCJKmonofont{FangSong}
+\setCJKmonofont{FangSong_GB2312}
 
 \setCJKfamilyfont{zhsong}{SimSun}
 \setCJKfamilyfont{zhhei}{SimHei}
-\setCJKfamilyfont{zhkai}{KaiTi}
-\setCJKfamilyfont{zhfs}{FangSong}
-\setCJKfamilyfont{zhli}{LiSu}
+\setCJKfamilyfont{zhkai}{KaiTi_GB2312}
+\setCJKfamilyfont{zhfs}{FangSong_GB2312}
+\setCJKfamilyfont{zhli}{STLiti}
 \setCJKfamilyfont{zhyou}{YouYuan}
 
 \newcommand*{\songti}{\CJKfamily{zhsong}}

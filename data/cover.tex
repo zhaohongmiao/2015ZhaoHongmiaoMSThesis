@@ -135,21 +135,21 @@
                     % 机密$\bigstar$10年
                     % 秘密$\bigstar$5年
 \newcommand{\UDC}{}%UDC
-\newcommand{\oucctitle}{中国海洋大学学位论文 \LaTeX\ 模板\\使用示例文档}%论文中文题目
-\ctitle{中国海洋大学学位论文 \LaTeX\ 模板使用示例文档}%必须修改因为页眉中用到
-\cauthor{郑海永}%可以选择修改因为仅在 pdf 文档信息中用到
-\cdegree{理学博士}%可以选择修改因为仅在 pdf 文档信息中用到
+\newcommand{\oucctitle}{图像频域显著性检测}%论文中文题目
+\ctitle{图像频域显著性检测}%必须修改因为页眉中用到
+\cauthor{赵红苗}%可以选择修改因为仅在 pdf 文档信息中用到
+\cdegree{工学硕士}%可以选择修改因为仅在 pdf 文档信息中用到
 \ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}%可以选择修改因为仅在 pdf 文档信息中用到
-\newcommand{\ouccauthor}{郑海永}%作者中文姓名
+\newcommand{\ouccauthor}{赵红苗}%作者中文姓名
 %\newcommand{\ouccsupervisor}{姬光荣教授}%作者导师中文姓名
 %\newcommand{\ouccdegree}{博\hspace{1em}士}%作者申请学位级别
 %\newcommand{\ouccmajor}{海洋信息探测与处理}%作者专业名称
 %\newcommand{\ouccdateday}{\CJKdigits{\the\year}年\CJKnumber{\the\month}月\CJKnumber{\the\day}日}
 %\newcommand{\ouccdate}{\CJKdigits{\the\year}年\CJKnumber{\the\month}月}
-\newcommand{\oucdatedefense}{2009年05月28日}%论文答辩时间
+\newcommand{\oucdatedefense}{2015年05月28日}%论文答辩时间
 %\newcommand{\oucdatedegree}{2009年6月}%学位授予时间
 \newcommand{\oucgratitude}{谨以此论文献给我的导师和亲人！}%封面感谢语
-\newcommand{\oucetitle}{An Introduction to \LaTeX{} Thesis Template of Ocean University of China}%论文英文题目
+\newcommand{\oucetitle}{Image Saliecy Detection in Frequency Domain}%论文英文题目
 %\newcommand{\ouceauthor}{Haiyong Zheng}%作者英文姓名
 \newcommand{\oucthesis}{\textsc{OUCThesis}}
 %%%%%默认自定义命令%%%%%
@@ -246,31 +246,21 @@
 {\normalsize\songti
 
   \indent
-  论文的摘要是对论文研究内容和成果的高度概括。摘要应对论文所研究的问题及其研究目
-  的进行描述，对研究方法和过程进行简单介绍，对研究成果和所得结论进行概括。摘要应
-  具有独立性和自明性，其内容应包含与论文全文同等量的主要信息。使读者即使不阅读全
-  文，通过摘要就能了解论文的总体内容和主要成果。
+显著性检测在计算机视觉应用中十分广泛，如图像分割、目标识别、图像重定向及视频压缩等。频域显著性检测（谱显著性检测）具有简单、快速、高效、不依赖于分类或其他先验知识的特点，吸引了越来越多的人对它进行研究。本文详细介绍了频域算法的具体流程，对国内外提出的算法和模型进行了具体的归纳和整理。通过分析发现许多计算方法还存在着显著区域检测不均匀、显著性细节检测不理想等问题。针对这些缺点，我们提出了一种新的显著性检测算法---基于幅度谱分析的自适应显著目标检测。
 
-  论文摘要的书写应力求精确、简明。切忌写成对论文书写内容进行提要的形式，尤其要避
-  免“第 1 章……；第 2 章……；……”这种或类似的陈述方式。
-
-  本文介绍清华大学论文模板 \thuthesis{} 的使用方法。本模板符合学校的本科、硕士、
-  博士论文格式要求。
-
-  本文的创新点主要有：
+我们假设自然图像是由显著区域和一些所谓的规则的区域组成，这些规则的区域被看作重复模式（非显著性）图像在空间域中周期出现的模式，证明是对应于频域幅度谱中一个或多个相应位置的尖峰。我们算法的思想是在正确尺度上利用幅度谱滤波平滑重复模式的尖峰，达到抑制图像非显著性区域，突出显著区域的目的。本文的贡献主要有：
   \begin{itemize}
-    \item 用例子来解释模板的使用方法；
-    \item 用废话来填充无关紧要的部分；
-    \item 一边学习摸索一边编写新代码。
+    \item 通过实验分析我们发现显著区域的尺寸与最优幅度谱滤波尺度之间存在特定的关系，这对于频域显著目标检测研究具有十分重要的意义;
+    \item 在尺度空间的基础上，提出了自适应最优尺度选择新的方法;
+    \item 引入了一种自适应权重融合新策略，融合不同显著目标所对应的显著图，从而保留有意义的显著性信息;
+    \item 本文提出的算法在与其他频域显著性检测模型进行对比时，选择的数据集更具有挑战性。
   \end{itemize}
 
-  关键词是为了文献标引工作、用以表示全文主要内容信息的单词或术语。关键词不超过 5
-  个，每个关键词中间用分号分隔。（模板作者注：关键词分隔符不用考虑，模板会自动处
-  理。英文关键词同理。）
+我们在四个国际公开数据集上进行了定性定量的对比实验，证明了我们的算法较其他的谱显著性模型在有效性和优越性方面表现的更好。
 }
 \vskip12bp
 {\xiaosi\heiti\noindent
-关键词：\hskip1em \TeX, \LaTeX, CJK, 模板, 论文}
+关键词：\hskip1em 谱显著性, 显著目标检测, 幅度谱分析, 尺度空间分析}
 
 \newpage
 
@@ -281,25 +271,19 @@
 \end{center}
 {\normalsize\songti
 
-   An abstract of a dissertation is a summary and extraction of research work
-   and contributions. Included in an abstract should be description of research
-   topic and research objective, brief introduction to methodology and research
-   process, and summarization of conclusion and contributions of the
-   research. An abstract should be characterized by independence and clarity and
-   carry identical information with the dissertation. It should be such that the
-   general idea and major contributions of the dissertation are conveyed without
-   reading the dissertation. 
+Saliency detection is widely useful for many computer vision applications, such as image segmentation, object recognition, image retargeting, video compression, etc. Being simple, fast, effective, and independent of categories, or other forms of prior knowledge, saliency detection in the frequency domain (spectral saliency) attracts more study. This paper introduces the concrete procedure of the algorithm in frequency domain and overviews the domestic and overseas models. The analysis indicates that many computational methods can not highlight the objects uniformly or have poor contrast saliency maps. To address these issues, a novel saliency detection model---salient object detection via automatic adaptive amplitude spectrum analysis is proposed in this paper. 
 
-   An abstract should be concise and to the point. It is a misunderstanding to
-   make an abstract an outline of the dissertation and words ``the first
-   chapter'', ``the second chapter'' and the like should be avoided in the
-   abstract.
+The proposed model assumes that a natural image consists of several salient and many so--called regular regions which are regarded as repeated patterns (nonsaliency). The spikes in the amplitude spectrum turn out to correspond to repeated patterns in spatial domain. The idea of the proposed method is smoothing the spikes in the amplitude spectrum at an appropriate scale to suppress nonsalient patterns for saliency pop-out. The main contributions of this paper are shown as follows:
+\begin{enumerate}
+\item  This paper observes that the optimal scale for smoothing the amplitude spectrum shares specific relation with the size of salient region, which is very important for the research of salient region detection in frequency domain.
+\item Automatic optimal scales selection based on the Spectrum Scale--Space is proposed in this paper.
+\item  A new strategy of adaptive weighted combination to incorporate meaningful saliency maps, produced by different optimal scales for multiple salient objects adaptively, is introduced for retaining meaningful saiency information.
+\item The selected datasets are more challenging when compared the proposed methods with selected state-of-art saliency models.
+\end{enumerate}
 
-   Key words are terms used in a dissertation for indexing, reflecting core
-   information of the dissertation. An abstract may contain a maximum of 5 key
-   words, with semi-colons used in between to separate one another.
+The performance evaluation of quantitative and qualitative comparisons on four challenging popular benchmark data sets validates that the proposed method outperforms the existing spectral saliency models in terms of effectiveness and superiority.
 }
 \vskip12bp
 {\xiaosi\heiti\noindent 
-\textbf{Keywords:\enskip \TeX, \LaTeX, CJK, template, thesis}}
+\textbf{Keywords:\enskip spectral saliency, salient object detection, amplitude spectrum analysis, scale sapce analysis}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
