@@ -1,0 +1,24 @@
+\begin{resume}
+
+  \resumeitem{个人简历}
+
+  1988 年 6 月 27 日出生于 山东 省 宁阳 县。
+  
+  2008 年 9 月考入 枣庄 学院 物理与电子工程系 电子信息工程 专业，2012 年 6 月本科毕业并获得 工程 学士学位。
+  
+  2012 年 9 月考入 中国海洋大学 电子 系攻读 硕士 学位至今。
+
+  \resumeitem{发表的学术论文} % 发表的和录用的合在一起
+     
+  \begin{enumerate}[{[}1{]}]
+  \item Zheng H, Zhao H, Sun X, Gao H and Ji G. Automatic setae segmentation from
+Chaetoceros microscopic images. Microscopy Research and Technique, 2014, 684–690. (SCI 收录, 检索号：AN4UA.)
+  \end{enumerate}
+
+  \resumeitem{在学期间参加的研究项目} % 有就写，没有就删除
+  \begin{enumerate}
+  \item 国家自然科学基金“基于视觉注意结合生物形态特征的海洋浮游植物显微图像分析”（批准号：61301240）
+  \item 国家自然科学基金项目“基于生物形态特征的中国海常见有害赤潮藻显微图像识别”（批准号：61271406）
+  \end{enumerate}
+  
+\end{resume}

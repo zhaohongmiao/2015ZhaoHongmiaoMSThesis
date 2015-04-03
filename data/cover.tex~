@@ -1,0 +1,300 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+% 中国海洋大学研究生学位论文封面
+% 参考：中国海洋大学研究生学位论文书写格式20130307.doc
+
+% 为避免出现错误，下面保留［清华大学学位论文模板原有定义无需修改］，
+% 请直接跳到后面［中国海洋大学学位论文模板部分请根据自己情况修改］。
+
+%%%%%%%%%%%%%%%%%%%%%%［清华大学学位论文模板原有定义无需修改］%%%%%%%%%%%%%%%%%%%%%%%
+\secretlevel{绝密} \secretyear{2100}
+
+\ctitle{清华大学学位论文 \LaTeX\ 模板\\使用示例文档}
+% 根据自己的情况选，不用这样复杂
+\makeatletter
+\ifthu@bachelor\relax\else
+  \ifthu@doctor
+    \cdegree{工学博士}
+  \else
+    \ifthu@master
+      \cdegree{工学硕士}
+    \fi
+  \fi
+\fi
+\makeatother
+
+
+\cdepartment[计算机]{计算机科学与技术系}
+\cmajor{计算机科学与技术}
+\cauthor{薛瑞尼} 
+\csupervisor{郑纬民教授}
+% 如果没有副指导老师或者联合指导老师，把下面两行相应的删除即可。
+\cassosupervisor{陈文光教授}
+\ccosupervisor{某某某教授}
+% 日期自动生成，如果你要自己写就改这个cdate
+%\cdate{\CJKdigits{\the\year}年\CJKnumber{\the\month}月}
+
+% 博士后部分
+% \cfirstdiscipline{计算机科学与技术}
+% \cseconddiscipline{系统结构}
+% \postdoctordate{2009年7月——2011年7月}
+
+\etitle{An Introduction to \LaTeX{} Thesis Template of Tsinghua University} 
+% 这块比较复杂，需要分情况讨论：
+% 1. 学术型硕士
+%    \edegree：必须为Master of Arts或Master of Science（注意大小写）
+%              “哲学、文学、历史学、法学、教育学、艺术学门类，公共管理学科
+%               填写Master of Arts，其它填写Master of Science”
+%    \emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+% 2. 专业型硕士
+%    \edegree：“填写专业学位英文名称全称”
+%    \emajor：“工程硕士填写工程领域，其它专业学位不填写此项”
+% 3. 学术型博士
+%    \edegree：Doctor of Philosophy（注意大小写）
+%    \emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+% 4. 专业型博士
+%    \edegree：“填写专业学位英文名称全称”
+%    \emajor：不填写此项
+\edegree{Doctor of Engineering} 
+\emajor{Computer Science and Technology} 
+\eauthor{Xue Ruini} 
+\esupervisor{Professor Zheng Weimin} 
+\eassosupervisor{Chen Wenguang} 
+% 这个日期也会自动生成，你要改么？
+% \edate{December, 2005}
+
+% 定义中英文摘要和关键字
+\begin{cabstract}
+  论文的摘要是对论文研究内容和成果的高度概括。摘要应对论文所研究的问题及其研究目
+  的进行描述，对研究方法和过程进行简单介绍，对研究成果和所得结论进行概括。摘要应
+  具有独立性和自明性，其内容应包含与论文全文同等量的主要信息。使读者即使不阅读全
+  文，通过摘要就能了解论文的总体内容和主要成果。
+
+  论文摘要的书写应力求精确、简明。切忌写成对论文书写内容进行提要的形式，尤其要避
+  免“第 1 章……；第 2 章……；……”这种或类似的陈述方式。
+
+  本文介绍清华大学论文模板 \thuthesis{} 的使用方法。本模板符合学校的本科、硕士、
+  博士论文格式要求。
+
+  本文的创新点主要有：
+  \begin{itemize}
+    \item 用例子来解释模板的使用方法；
+    \item 用废话来填充无关紧要的部分；
+    \item 一边学习摸索一边编写新代码。
+  \end{itemize}
+
+  关键词是为了文献标引工作、用以表示全文主要内容信息的单词或术语。关键词不超过 5
+  个，每个关键词中间用分号分隔。（模板作者注：关键词分隔符不用考虑，模板会自动处
+  理。英文关键词同理。）
+\end{cabstract}
+
+\ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}
+
+\begin{eabstract} 
+   An abstract of a dissertation is a summary and extraction of research work
+   and contributions. Included in an abstract should be description of research
+   topic and research objective, brief introduction to methodology and research
+   process, and summarization of conclusion and contributions of the
+   research. An abstract should be characterized by independence and clarity and
+   carry identical information with the dissertation. It should be such that the
+   general idea and major contributions of the dissertation are conveyed without
+   reading the dissertation. 
+
+   An abstract should be concise and to the point. It is a misunderstanding to
+   make an abstract an outline of the dissertation and words ``the first
+   chapter'', ``the second chapter'' and the like should be avoided in the
+   abstract.
+
+   Key words are terms used in a dissertation for indexing, reflecting core
+   information of the dissertation. An abstract may contain a maximum of 5 key
+   words, with semi-colons used in between to separate one another.
+\end{eabstract}
+
+\ekeywords{\TeX, \LaTeX, CJK, template, thesis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%［中国海洋大学学位论文模板部分请根据自己情况修改］%%%%%%%%%%%%%%%%%%%
+% 中国海洋大学研究生学位论文封面
+% 必须填写的内容包括（其他最好不要修改）：
+%   分类号、密级、UDC
+%   论文中文题目、作者中文姓名
+%   论文答辩时间
+%   封面感谢语
+%   论文英文题目
+%   中文摘要、中文关键词
+%   英文摘要、英文关键词
+%
+%%%%%［自定义］%%%%%
+\newcommand{\fenleihao}{}%分类号
+\newcommand{\miji}{}%密级 
+                    % 绝密$\bigstar$20年 
+                    % 机密$\bigstar$10年
+                    % 秘密$\bigstar$5年
+\newcommand{\UDC}{}%UDC
+\newcommand{\oucctitle}{图像频域显著性检测}%论文中文题目
+\ctitle{图像频域显著性检测}%必须修改因为页眉中用到
+\cauthor{赵红苗}%可以选择修改因为仅在 pdf 文档信息中用到
+\cdegree{工学硕士}%可以选择修改因为仅在 pdf 文档信息中用到
+\ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}%可以选择修改因为仅在 pdf 文档信息中用到
+\newcommand{\ouccauthor}{赵红苗}%作者中文姓名
+%\newcommand{\ouccsupervisor}{姬光荣教授}%作者导师中文姓名
+%\newcommand{\ouccdegree}{博\hspace{1em}士}%作者申请学位级别
+%\newcommand{\ouccmajor}{海洋信息探测与处理}%作者专业名称
+%\newcommand{\ouccdateday}{\CJKdigits{\the\year}年\CJKnumber{\the\month}月\CJKnumber{\the\day}日}
+%\newcommand{\ouccdate}{\CJKdigits{\the\year}年\CJKnumber{\the\month}月}
+\newcommand{\oucdatedefense}{2015年05月28日}%论文答辩时间
+%\newcommand{\oucdatedegree}{2009年6月}%学位授予时间
+\newcommand{\oucgratitude}{谨以此论文献给我的导师和亲人！}%封面感谢语
+\newcommand{\oucetitle}{Image Saliecy Detection in Frequency Domain}%论文英文题目
+%\newcommand{\ouceauthor}{Haiyong Zheng}%作者英文姓名
+\newcommand{\oucthesis}{\textsc{OUCThesis}}
+%%%%%默认自定义命令%%%%%
+% 空下划线定义
+\newcommand{\oucblankunderline}[1]{\rule[-2pt]{#1}{.7pt}}
+\newcommand{\oucunderline}[2]{\underline{\hskip #1 #2 \hskip#1}}
+
+% 论文封面第一页
+%%不需要改动%%
+\vspace*{5cm}
+{\xiaoer\heiti\oucgratitude
+
+\begin{flushright}
+---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---\hspace*{-2mm}---~\ouccauthor
+\end{flushright}
+}
+
+\newpage 
+\mbox{} 
+\newpage
+
+% 论文封面第二页
+%%不需要改动%%
+\vspace*{1cm}
+\begin{center}
+  {\xiaoer\heiti\oucctitle}
+\end{center}
+\vspace{10.7cm}
+{\normalsize\songti
+\begin{flushright}
+{\renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{r@{}l}
+    学位论文答辩日期：~ & \oucunderline{1.8em}{\oucdatedefense} \\
+    指导教师签字：~ & \oucblankunderline{5cm} \\
+    答辩委员会成员签字：~ & \oucblankunderline{5cm} \\
+    ~ & \oucblankunderline{5cm} \\
+    ~ & \oucblankunderline{5cm} \\
+    ~ & \oucblankunderline{5cm} \\
+    ~ & \oucblankunderline{5cm} \\
+    ~ & \oucblankunderline{5cm} \\
+    ~ & \oucblankunderline{5cm} \\
+  \end{tabular}
+}
+\end{flushright}
+}
+
+\newpage 
+\mbox{} 
+\newpage
+
+% 论文封面第三页
+%%不需要改动%%
+\vspace*{1cm}
+\begin{center}
+  {\xiaosan\heiti 独\hspace{1em}创\hspace{1em}声\hspace{1em}明}
+\end{center}
+\par{\normalsize\songti\parindent2em
+本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。据我所知，除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含未获得~\oucblankunderline{7cm}（注：如没有其他需要特别声明的，本栏可空）或其他教育机构的学位或证书使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
+}
+\vskip1.5cm
+\begin{flushright}{\normalsize\songti
+  学位论文作者签名：\hskip2cm 签字日期：\hskip1cm 年 \hskip0.7cm 月\hskip0.7cm 日}
+\end{flushright}
+\vskip.5cm
+{\setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(10, 0.1)
+    \multiput(0,0)(0.2, 0){50}{\rule{0.15\unitlength}{.5pt}}
+  \end{picture}}
+\vskip1cm
+\begin{center}
+  {\xiaosan\heiti 学位论文版权使用授权书}
+\end{center}
+\par{\normalsize\songti\parindent2em
+本学位论文作者完全了解学校有关保留、使用学位论文的规定，并同意以下事项：
+\begin{enumerate}
+\item 学校有权保留并向国家有关部门或机构送交论文的复印件和磁盘，允许论文被查阅和借阅。
+\item 学校可以将学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。同时授权清华大学“中国学术期刊(光盘版)电子杂志社”用于出版和编入CNKI《中国知识资源总库》，授权中国科学技术信息研究所将本学位论文收录到《中国学位论文全文数据库》。
+\end{enumerate}
+（保密的学位论文在解密后适用本授权书）
+}
+\vskip1.5cm
+{\parindent0pt\normalsize\songti
+学位论文作者签名：\hskip4.2cm\relax%
+导师签字：\relax\hspace*{1.2cm}\\
+签字日期：\hskip1cm 年\hskip0.7cm 月\hskip0.7cm 日\relax\hfill%
+签字日期：\hskip1cm 年\hskip0.7cm 月\hskip0.7cm 日\relax\hspace*{1.2cm}}
+
+\newpage 
+\mbox{} 
+\newpage
+
+\pagestyle{plain}
+\clearpage\pagenumbering{roman}
+
+% 中文摘要
+%%［需要填写：中文摘要、中文关键词］%%
+\begin{center}
+  {\sanhao[1.5]\heiti\oucctitle\\\vskip7pt 摘\hspace{1em}要}
+\end{center}
+{\normalsize\songti
+
+  \indent
+显著性检测在计算机视觉应用中十分广泛，如图像分割、目标识别、图像重定向及视频压缩等。频域显著性检测（谱显著性检测）具有简单、快速、高效、不依赖于分类或其他先验知识的特点，吸引了越来越多的人对它进行研究。本文详细介绍了频域算法的具体流程，对国内外提出的算法和模型进行了具体的归纳和整理。通过分析发现许多计算方法还存在着显著区域检测不均匀、显著性细节检测不理想等问题。针对这些缺点，我们提出了一种新的显著性检测算法---基于幅度谱分析的自适应显著目标检测。
+
+我们假设自然图像是由显著区域和一些所谓的规则的区域组成，这些规则的区域被看作重复模式（非显著性）图像在空间域中周期出现的模式，证明是对应于频域幅度谱中一个或多个相应位置的尖峰。我们算法的思想是在正确尺度上利用幅度谱滤波平滑重复模式的尖峰，达到抑制图像非显著性区域，突出显著区域的目的。本文的贡献主要有：
+  \begin{itemize}
+    \item 通过实验分析我们发现显著区域的尺寸与最优幅度谱滤波尺度之间存在特定的关系，这对于频域显著目标检测研究具有十分重要的意义;
+    \item 在尺度空间的基础上，提出了自适应最优尺度选择新的方法;
+    \item 引入了一种自适应权重融合新策略，融合不同显著目标所对应的显著图，从而保留有意义的显著性信息;
+    \item 本文提出的算法在与其他频域显著性检测模型进行对比时，选择的数据集更具有挑战性。
+  \end{itemize}
+
+我们在四个国际公开数据集上进行了定性定量的对比实验，证明了我们的算法较其他的谱显著性模型在有效性和优越性方面表现的更好。
+}
+\vskip12bp
+{\xiaosi\heiti\noindent
+关键词：\hskip1em 谱显著性; 显著目标检测; 幅度谱分析; 尺度空间分析}
+
+\newpage 
+\mbox{} 
+\newpage
+
+% 英文摘要
+%%［需要填写：英文摘要、英文关键词］%%
+\begin{center}
+  {\sanhao[1.5]\heiti\oucetitle\\\vskip7pt Abstract}
+\end{center}
+{\normalsize\songti
+
+Saliency detection is widely useful for many computer vision applications, such as image segmentation, object recognition, image retargeting, video compression, etc. Being simple, fast, effective, and independent of categories, or other forms of prior knowledge, saliency detection in the frequency domain (spectral saliency) attracts more study  since it was presented. This paper introduces the detailed procedure of the algorithm in frequency domain and overviews the domestic and overseas models. The analysis indicates that many computational methods have uniform salient object detection and unsatisfactory saliency details detection. To address these issues, a novel saliency detection model---salient object detection via automatic adaptive amplitude spectrum analysis is proposed in this paper. 
+
+The proposed model assumes that a natural image consists of several salient and many so--called regular regions which are regarded as repeated patterns (nonsaliency). The spikes in the amplitude spectrum turn out to correspond to repeated patterns in spatial domain. The idea of the proposed method is smoothing the spikes in the amplitude spectrum at an appropriate scale to suppress nonsalient patterns for saliency pop-out. The main contributions of this paper are shown as follows:
+\begin{enumerate}
+\item  This paper observes that the optimal scale for smoothing the amplitude spectrum shares specific relation with the size of salient region, which is very important for the research of salient region detection in frequency domain.
+\item Automatic optimal scales selection based on the Spectrum Scale--Space is proposed in this paper.
+\item  A new strategy of adaptive weighted combination to incorporate meaningful saliency maps, produced by different optimal scales for multiple salient objects adaptively, is introduced for retaining meaningful saiency information.
+\item The selected datasets are more challenging when compared the proposed methods with selected state-of-art saliency models.
+\end{enumerate}
+
+The performance evaluation of quantitative and qualitative comparisons on four challenging popular benchmark data sets validates that the proposed method outperforms the existing spectral saliency models in terms of effectiveness and superiority.
+}
+\vskip12bp
+{\xiaosi\heiti\noindent 
+\textbf{Keywords:\enskip spectral saliency, salient object detection, amplitude spectrum analysis, scale sapce analysis}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\mbox{} 
+\newpage
