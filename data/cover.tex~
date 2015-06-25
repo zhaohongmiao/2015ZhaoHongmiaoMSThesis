@@ -141,12 +141,13 @@
 \cdegree{工学硕士}%可以选择修改因为仅在 pdf 文档信息中用到
 \ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}%可以选择修改因为仅在 pdf 文档信息中用到
 \newcommand{\ouccauthor}{赵红苗}%作者中文姓名
+%\newcommand{\ouccauthor}{***}%外审时用到
 %\newcommand{\ouccsupervisor}{姬光荣教授}%作者导师中文姓名
 %\newcommand{\ouccdegree}{博\hspace{1em}士}%作者申请学位级别
 %\newcommand{\ouccmajor}{海洋信息探测与处理}%作者专业名称
 %\newcommand{\ouccdateday}{\CJKdigits{\the\year}年\CJKnumber{\the\month}月\CJKnumber{\the\day}日}
 %\newcommand{\ouccdate}{\CJKdigits{\the\year}年\CJKnumber{\the\month}月}
-\newcommand{\oucdatedefense}{2015年05月28日}%论文答辩时间
+\newcommand{\oucdatedefense}{           }%论文答辩时间
 %\newcommand{\oucdatedegree}{2009年6月}%学位授予时间
 \newcommand{\oucgratitude}{谨以此论文献给我的导师和亲人！}%封面感谢语
 \newcommand{\oucetitle}{Image Saliecy Detection in Frequency Domain}%论文英文题目
@@ -167,9 +168,11 @@
 \end{flushright}
 }
 
+\begin{comment}
+
 \newpage 
-\mbox{} 
-\newpage
+%\mbox{} 
+%\newpage
 
 % 论文封面第二页
 %%不需要改动%%
@@ -182,7 +185,7 @@
 \begin{flushright}
 {\renewcommand{\arraystretch}{1.3}
   \begin{tabular}{r@{}l}
-    学位论文答辩日期：~ & \oucunderline{1.8em}{\oucdatedefense} \\
+    学位论文答辩日期：~ & \oucunderline{2.5cm}{\oucdatedefense} \\
     指导教师签字：~ & \oucblankunderline{5cm} \\
     答辩委员会成员签字：~ & \oucblankunderline{5cm} \\
     ~ & \oucblankunderline{5cm} \\
@@ -197,8 +200,8 @@
 }
 
 \newpage 
-\mbox{} 
-\newpage
+%\mbox{} 
+%\newpage
 
 % 论文封面第三页
 %%不需要改动%%
@@ -237,9 +240,11 @@
 签字日期：\hskip1cm 年\hskip0.7cm 月\hskip0.7cm 日\relax\hfill%
 签字日期：\hskip1cm 年\hskip0.7cm 月\hskip0.7cm 日\relax\hspace*{1.2cm}}
 
+\end{comment}
+
 \newpage 
-\mbox{} 
-\newpage
+%\mbox{} 
+%\newpage
 
 \pagestyle{plain}
 \clearpage\pagenumbering{roman}
@@ -252,25 +257,24 @@
 {\normalsize\songti
 
   \indent
-显著性检测在计算机视觉应用中十分广泛，如图像分割、目标识别、图像重定向及视频压缩等。频域显著性检测（谱显著性检测）具有简单、快速、高效、不依赖于分类或其他先验知识的特点，吸引了越来越多的人对它进行研究。本文详细介绍了频域算法的具体流程，对国内外提出的算法和模型进行了具体的归纳和整理。通过分析发现许多计算方法还存在着显著区域检测不均匀、显著性细节检测不理想等问题。针对这些缺点，我们提出了一种新的显著性检测算法---基于幅度谱分析的自适应显著目标检测。
+显著性检测在计算机视觉中具有广泛的应用，如图像分割、目标识别、图像重定向及视频压缩等。频域显著性检测（谱显著性检测）具有简单、快速、高效、不依赖于分类或其他先验知识的特点，自提出以来吸引了越来越多的人对它进行研究。本文总结了频域显著性检测算法的具体流程，并对前沿的频域显著性检测算法和模型进行了概述。通过分析发现许多计算方法还存在着显著区域检测不均匀、显著性细节检测不理想等问题。
 
-我们假设自然图像是由显著区域和一些所谓的规则的区域组成，这些规则的区域被看作重复模式（非显著性）图像在空间域中周期出现的模式，证明是对应于频域幅度谱中一个或多个相应位置的尖峰。我们算法的思想是在正确尺度上利用幅度谱滤波平滑重复模式的尖峰，达到抑制图像非显著性区域，突出显著区域的目的。本文的贡献主要有：
-  \begin{itemize}
-    \item 通过实验分析我们发现显著区域的尺寸与最优幅度谱滤波尺度之间存在特定的关系，这对于频域显著目标检测研究具有十分重要的意义;
-    \item 在尺度空间的基础上，提出了自适应最优尺度选择新的方法;
-    \item 引入了一种自适应权重融合新策略，融合不同显著目标所对应的显著图，从而保留有意义的显著性信息;
-    \item 本文提出的算法在与其他频域显著性检测模型进行对比时，选择的数据集更具有挑战性。
-  \end{itemize}
+假设自然图像是由显著区域和一些重复模式（非显著性）组成，图像在频域幅度谱中一个或多个尖峰对应于空间域中重复出现的模式。如果能在合适尺度上利用幅度谱滤波平滑重复模式的尖峰，就可以达到抑制图像非显著性区域，突出显著区域的目的。本文在此基础上提出了一种新的显著性检测算法---基于幅度谱分析的自适应显著目标检测算法。论文的贡献主要有：
+\begin{enumerate}
+    \item 给出了显著区域的尺寸与最优幅度谱滤波尺度之间的特定关系，这对于频域显著目标检测研究具有十分重要的意义；
+    \item 在尺度空间的基础上，提出了自适应最优尺度选择的新方法，该方法可以均匀地突出显著目标；
+    \item 提出了自适应权重融合策略，通过融合不同的显著图，从而保留有意义的显著性信息。
+\end{enumerate}
 
-我们在四个国际公开数据集上进行了定性定量的对比实验，证明了我们的算法较其他的谱显著性模型在有效性和优越性方面表现的更好。
+我们在四个国际公开的较具有挑战性的数据集上进行了定性定量的对比实验，证明了本文的算法较其他的谱显著性模型检测结果更加均匀，更加精确。
 }
 \vskip12bp
 {\xiaosi\heiti\noindent
-关键词：\hskip1em 谱显著性; 显著目标检测; 幅度谱分析; 尺度空间分析}
+关键词：\hskip1em 谱显著性； 显著目标检测； 幅度谱分析； 尺度空间分析}
 
 \newpage 
-\mbox{} 
-\newpage
+%\mbox{} 
+%\newpage
 
 % 英文摘要
 %%［需要填写：英文摘要、英文关键词］%%
@@ -279,22 +283,21 @@
 \end{center}
 {\normalsize\songti
 
-Saliency detection is widely useful for many computer vision applications, such as image segmentation, object recognition, image retargeting, video compression, etc. Being simple, fast, effective, and independent of categories, or other forms of prior knowledge, saliency detection in the frequency domain (spectral saliency) attracts more study  since it was presented. This paper introduces the detailed procedure of the algorithm in frequency domain and overviews the domestic and overseas models. The analysis indicates that many computational methods have uniform salient object detection and unsatisfactory saliency details detection. To address these issues, a novel saliency detection model---salient object detection via automatic adaptive amplitude spectrum analysis is proposed in this paper. 
+Saliency detection is widely used in many computer vision applications, such as image segmentation, object recognition, image retargeting, video compression, etc. Being simple, fast, effective, and independent of categories, or other forms of prior knowledge, saliency detection in the frequency domain (spectral saliency) attracts more study since it was presented. This paper summarizes the detailed procedure of saliency detection algorithm in the frequency domain and reviews the state-of-the-art spectral saliency detection models. Through analysis, it is found that many computational methods can not uniformly highlight the salient objects and satisfactorily detect the saliency details.
 
-The proposed model assumes that a natural image consists of several salient and many so--called regular regions which are regarded as repeated patterns (nonsaliency). The spikes in the amplitude spectrum turn out to correspond to repeated patterns in spatial domain. The idea of the proposed method is smoothing the spikes in the amplitude spectrum at an appropriate scale to suppress nonsalient patterns for saliency pop-out. The main contributions of this paper are shown as follows:
+Assuming that a natural image consists of several salient regions and many repeated patterns (nosaliency), the spikes in the amplitude spectrum turn out to correspond to repeated patterns in spatial domain. If the spikes in the amplitude spectrum are smoothed at an appropriate scale, the nonsalient patterns will be suppressed, thereby producing the pop-out of the salient objects. To address this issue, a novel saliency detection model---salient object detection via automatic adaptive amplitude spectrum analysis is proposed in this paper. The main contributions are shown as follows:
 \begin{enumerate}
-\item  This paper observes that the optimal scale for smoothing the amplitude spectrum shares specific relation with the size of salient region, which is very important for the research of salient region detection in frequency domain.
-\item Automatic optimal scales selection based on the Spectrum Scale--Space is proposed in this paper.
-\item  A new strategy of adaptive weighted combination to incorporate meaningful saliency maps, produced by different optimal scales for multiple salient objects adaptively, is introduced for retaining meaningful saiency information.
-\item The selected datasets are more challenging when compared the proposed methods with selected state-of-art saliency models.
+\item  Presenting the specific relation between optimal scale for smoothing the amplitude spectrum and the size of salient region. This relation plays a very important role in the research of salient region detection in frequency domain.
+\item   Proposing a method of automatic optimal scales selection based on the Spectrum Scale-Space. This method can highlight the salient objects uniformly.
+\item  Introducing a strategy of adaptive weighted combination. This new strategy can retain meaningful saliency information by incorporating different saliency maps adaptively.
 \end{enumerate}
 
-The performance evaluation of quantitative and qualitative comparisons on four challenging popular benchmark data sets validates that the proposed method outperforms the existing spectral saliency models in terms of effectiveness and superiority.
+The performance evaluation of quantitative and qualitative comparisons on four challenging popular benchmark data sets validates that the output of the proposed model is more uniform and precise when compared with other spectral saliency models.
 }
 \vskip12bp
 {\xiaosi\heiti\noindent 
 \textbf{Keywords:\enskip spectral saliency, salient object detection, amplitude spectrum analysis, scale sapce analysis}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage 
-\mbox{} 
-\newpage
+%\newpage 
+%\mbox{} 
+%\newpage
